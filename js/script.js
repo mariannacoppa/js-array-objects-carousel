@@ -22,12 +22,12 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
-// richiamo il contenitoredegli oggetti nel dom
+// richiamo il contenitore degli oggetti nel dom
 let container = document.getElementById('main-container');
-// mostro tutti gli oggetti dell'array nel dom
+// mostro tutti gli oggetti dell'array nel dom ciclando l'array
 images.forEach((elem, index) => {
-    container.innerHTML += `<div class="items" id="items">
-            <div id="number" class="number text-center">${index}</div>
+    container.innerHTML += `<div class="items d-none" id="items">
+            <div id="number" class="number text-center">${index + 1}</div>
             <div class="item active" id="item-active">
                 <h2 id="title" class="text-center">${elem.title}</h2>
                 <img src="${elem.image}">
@@ -35,3 +35,9 @@ images.forEach((elem, index) => {
             </div>
         </div>`
 });
+// definisco l'indice dell'elemento che voglio sia inisialmente visibile
+let activeElement = 0;
+// recpero tutti gli elementi che hanno la classe items
+const items = document.querySelectorAll('.items');
+//  prendo il primo elemento dell'array items e gli tolgo la classe d-none
+items[activeElement].classList.remove('d-none');
