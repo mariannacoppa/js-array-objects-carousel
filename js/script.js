@@ -41,19 +41,31 @@ let activeElement = 0;
 const items = document.querySelectorAll('.items');
 //  prendo il primo elemento dell'array items e gli tolgo la classe d-none
 items[activeElement].classList.remove('d-none');
-// recupero dal dom il pulsante
+// recupero dal dom il pulsante per mandare avanti le cards
 const btn = document.getElementById('go-on');
 btn.addEventListener('click', function () {
     //  aggiungo la classe d-none
     items[activeElement].classList.add('d-none');
-    // se activeElement
     if (activeElement == images.length - 1) {
         activeElement = 0;
     }
     else {
-        // incemento active element
+        // incremento active element
         activeElement++;
     }
     // ora che activeElement vale 1, tolgo la classe d-none dall'elemento nuovo
+    items[activeElement].classList.remove('d-none');
+});
+//  recupero dal dom il pulsante per mandare indietro le cards
+const button = document.getElementById('go-back');
+button.addEventListener('click', function () {
+    // aggiungo la classe d-none
+    items[activeElement].classList.add('d-none');
+    if (activeElement == 0) {
+        activeElement = images.length - 1;
+    }
+    else {
+        activeElement--;
+    }
     items[activeElement].classList.remove('d-none');
 });
