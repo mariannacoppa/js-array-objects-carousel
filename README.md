@@ -21,3 +21,14 @@ Aggiungere le thumbnails (sottoforma di miniatura) ed al click attivare l’imma
 Aggiungere funzionalità di autoplay: dopo un certo periodo di tempo (3 secondi) l’immagine attiva dovrà cambiare alla successiva.
 *BONUS 3:*
 Aggiungere bottoni di start/stop e di inversione del meccanismo di autoplay
+
+Pseudocodice
+
+1 creo i tag html contenitori delle immagini e del testo
+2 inserisco l'immagine grande da visualizzare
+3 definisco lo stile con css
+4 rimuovo i contenuti statici dall'html 
+5 inserisco gli oggetti contenuti nell'array
+6 rendo non visibili (o in miniatura) gli oggetti diversi da quello in primo piano
+7 aggiungo l'evento click ai relativi tag di scorrimento degli oggetti
+8 imposto lo scorrimento degli oggetti in entrambe le direzioni

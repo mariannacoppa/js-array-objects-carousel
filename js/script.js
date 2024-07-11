@@ -1,3 +1,4 @@
+// array di oggetti
 const images = [
     {
         image: 'img/01.webp',
@@ -21,3 +22,8 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
+// // visualizzazione con forEach
+// images.forEach((elem) => {
+//     console.log(elem.image);
+//     console.log(elem.title);
+// });
