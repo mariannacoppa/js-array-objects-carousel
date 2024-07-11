@@ -35,9 +35,25 @@ images.forEach((elem, index) => {
             </div>
         </div>`
 });
-// definisco l'indice dell'elemento che voglio sia inisialmente visibile
+// definisco l'indice dell'elemento che voglio sia inizialmente visibile
 let activeElement = 0;
 // recpero tutti gli elementi che hanno la classe items
 const items = document.querySelectorAll('.items');
 //  prendo il primo elemento dell'array items e gli tolgo la classe d-none
 items[activeElement].classList.remove('d-none');
+// recupero dal dom il pulsante
+const btn = document.getElementById('go-on');
+btn.addEventListener('click', function () {
+    //  aggiungo la classe d-none
+    items[activeElement].classList.add('d-none');
+    // se activeElement
+    if (activeElement == images.length - 1) {
+        activeElement = 0;
+    }
+    else {
+        // incemento active element
+        activeElement++;
+    }
+    // ora che activeElement vale 1, tolgo la classe d-none dall'elemento nuovo
+    items[activeElement].classList.remove('d-none');
+});
