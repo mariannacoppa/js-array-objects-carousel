@@ -27,7 +27,7 @@ let container = document.getElementById('main-container');
 // mostro tutti gli oggetti dell'array nel dom ciclando l'array
 images.forEach((elem, index) => {
     container.innerHTML += `<div class="items d-none" id="items">
-            <div id="number" class="number text-center">${index + 1}</div>
+            <div id="number" class="number text-center d-none">${index + 1}</div>
             <div class="item active" id="item-active">
                 <h2 id="title" class="text-center">${elem.title}</h2>
                 <img src="${elem.image}">
@@ -59,7 +59,6 @@ btn.addEventListener('click', function () {
 //  recupero dal dom il pulsante per mandare indietro le cards
 const button = document.getElementById('go-back');
 button.addEventListener('click', function () {
-    // aggiungo la classe d-none
     items[activeElement].classList.add('d-none');
     if (activeElement == 0) {
         activeElement = images.length - 1;

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 #main-container {
-    width: 900px;
+    width: 400px;
     margin: 30px auto;
 }
 .items {
@@ -15,8 +15,13 @@
     border-radius: 30px;
     padding: 20px;
     width: 400px;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 img {
     width: 100%;
     object-fit: contain;
+    max-height: 400px;
 }
